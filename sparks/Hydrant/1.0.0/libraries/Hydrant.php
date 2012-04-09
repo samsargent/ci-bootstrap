@@ -77,6 +77,12 @@ class Hydrant
   {
     try
     {
+      foreach(get_defined_functions() as $via){
+       foreach($via as $function){
+         h2o::addFilter($function);
+       }
+      }
+      
       $this->h2o = new h2o($view, $this->_config);
     }
     catch (Exception $e)

@@ -166,7 +166,7 @@ class H2o_Context implements ArrayAccess {
                             $object->h2o_safe === true || in_array($part, $object->h2o_safe)
                         )
                     );
-                    $object = $methodAllowed ? $object->$part() : null;
+                    $object = $object->$part();
                 }
                 else return null;
             }

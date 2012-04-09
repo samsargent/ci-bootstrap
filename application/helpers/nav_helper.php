@@ -7,9 +7,7 @@
  * @param String $linkID
  * @return String/Null
  */
-function isActive($pageID,$linkID){
-    if($pageID == $linkID){
-        return "active";
-    }
+function is_active($route){
+  $ci =& get_instance();
+  return ($ci->router->fetch_class().'#'.$ci->router->fetch_method() == $route) ? 'active' : '';
 }
-?>
