@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{{ title }}</title>
+<title>{{ description }}</title>
+
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="{{ keywords }}" />
+<meta name="author" content="{{ author }}" />
+
+<link rel="stylesheet" href="{{ 'assets/css/style.css' | base_url }} ">
+<link rel="stylesheet" href="{{ 'assets/css/global.css' | base_url }}">
+
+<!-- extra CSS-->
+{% for index, item in stylesheets %}
+<link rel="stylesheet" href="{{ base_url }}assets/css/{{ item }}">
+{% endfor %}
+
+<!-- extra fonts-->
+{% for index, item in fonts %}
+<link href="http://fonts.googleapis.com/css?family={{ item }}"
+	rel="stylesheet" type="text/css">
+{% endfor %}
+<script src="{{"assets/js/libs/modernizr-2.5.3.min.js" | base_url }}"></script>
+
+<!-- Le fav and touch icons -->
+<link rel="shortcut icon" href="{{ 'assets/images/ico/favicon.ico' | base_url }}">
+<link rel="apple-touch-icon" href="{{ 'assets/images/ico/apple-touch-icon-precompresse.png' | base_url }}">
+<link rel="apple-touch-icon" sizes="57x57" href="{{ 'assets/images/ico/apple-touch-icon-57x57-precompressed.png' | base_url }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ 'assets/images/ico/apple-touch-icon-72x72-precompressed.png' | base_url }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ 'assets/images/ico/apple-touch-icon-114x114-precompressed.png' | base_url }}">
+
+</head>
+<body>
+	{{ body }}
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{{ "assets/js/libs/jquery-1.7.1.min.js" | base_url }}"><\/script>')</script>
+	<script src="{{ "assets/js/libs/underscore-1.3.1.min.js" | base_url }}"></script>
+	<script src="{{ "assets/js/plugins.js" | base_url }}"></script>
+	<script src="{{ "assets/js/script.js" | base_url }}"></script>
+
+	<!-- extra js-->
+  {% for index, item in javascripts %}
+	<script defer src="{{ item }}" type="text/javascript"></script>
+	{% endfor %}
+
+	<script>
+    var _gaq=[['_setAccount','{{ google_analytics_id }}'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>

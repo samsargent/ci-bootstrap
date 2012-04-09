@@ -1,16 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends MY_Controller {
+class Home extends CI_Controller {
 	
 	public function index(){	
 		
-		/*
-		 *set up title and keywords (if not the default in custom.php config file will be set) 
-		 */
-		$this->title = "Yaaaaa";
-		$this->keywords = "arny, arnodo";
+		  $data['title']   = 'My nice title';
+		  $data['content'] = 'Goodbye World!'; // never had a bad day? :P
+		  $this->hydrant->render('index.html', $data);
 		
-		$this->_render('pages/home');
 	}
 	
 }
