@@ -2,7 +2,7 @@ ci-bootstrap: CodeIgniter development never been this fast!
 ---------------------------------------------------------------
 
 Tired of writing that boring-repetivite-suck-ass PHP code? Then ci-bootstrap is here to save your day!
-Get benefits of HTML5Boilerplate, CodeIgniter Framework, Twitter Bootstrap Template, Sparks Packaging, RedBean ORM, ci_authentication and Hydrant+h2o with Django style template engine **all baked in**.
+Get benefits of HTML5Boilerplate, CodeIgniter Framework, Twitter Bootstrap Template, Sparks Packaging, RedBean ORM, ci_authentication **all baked in**.
 
 USAGE
 -------------------
