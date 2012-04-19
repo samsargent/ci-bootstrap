@@ -4,9 +4,8 @@ class Home extends CI_Controller {
 	
 	public function index(){	
 	  $data['title']   = 'My nice title';
-	  $data['content'] = 'Goodbye World!'; // never had a bad day? :P
-	  $data['this'] = $this;
-	  $this->hydrant->render('index.html', $data);	
+	  $data['content'] = 'home/index.html';
+	  $this->load->view('layouts/application.html', $data);	
 	}
 	
 }

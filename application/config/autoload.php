@@ -39,7 +39,6 @@
 
 $autoload['packages'] = array();
 $autoload['sparks'] = array(
-  'hydrant/1.0.0'
 );
 
 
